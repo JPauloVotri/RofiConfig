@@ -1,0 +1,153 @@
+/*****----- Global Properties -----*****/
+@import                          "../../colors.rasi"
+
+* {
+    font: "Ubuntu Nerd Font Med 14";
+}
+
+/*****----- Main Window -----*****/
+window {
+    width:                       600px;
+    border-radius:               8px;
+    background-color:            @crust;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    spacing:                     8px;
+    padding:                     24px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @text;
+    children:                    [ "textbox-prompt-colon",
+                                   "entry",
+                                   "num-filtered-rows",
+                                   "textbox-num-sep",
+                                   "num-rows" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     8px 12px;
+    border-radius:               8px;
+    background-color:            @mantle;
+    text-color:                  @red;
+}
+
+entry {
+    enabled:                     true;
+    padding:                     8px 12px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Buscar fonte...";
+    placeholder-color:           inherit;
+}
+
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     8px 0 8px 8px;
+    border-radius:               8px 0 0 8px;
+    background-color:            @mantle;
+    text-color:                  @green;
+}
+
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    padding:                     8px 4px;
+    background-color:            @mantle;
+    text-color:                  @green;
+}
+
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     8px 8px 8px 0;
+    border-radius:               0 8px 8px 0;
+    background-color:            @mantle;
+    text-color:                  @green;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    scrollbar:                   true;
+
+    spacing:                     4px;
+    background-color:            transparent;
+    text-color:                  @text;
+}
+
+scrollbar {
+    handle-width:                4px ;
+    handle-color:                @mauve;
+    border-radius:               8px;
+    background-color:            @base;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     8px;
+    padding:                     8px 8px;
+    border-radius:               8px;
+    border-color:                @mauve;
+    background-color:            @base;
+    text-color:                  @text;
+    cursor:                      pointer;
+}
+
+element selected {
+    background-color:            @surface1;
+    text-color:                  @mauve;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    border-color:                @mauve;
+    background-color:            transparent;
+    text-color:                  @text;
+}
+
+textbox {
+    padding:                     8px 12px;
+    border-radius:               8px;
+    border-color:                @mauve;
+    background-color:            @base;
+    text-color:                  @text;
+    placeholder-color:           @text;
+}
+
+error-message {
+    padding:                     8px;
+    border:                      2px solid;
+    border-radius:               8px;
+    border-color:                @mauve;
+    background-color:            @base;
+    text-color:                  @red;
+}
