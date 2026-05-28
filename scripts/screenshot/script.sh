@@ -8,7 +8,7 @@
 # Import Current Theme
 theme="$HOME/.config/rofi/scripts/screenshot/theme.rasi"
 
-dir="$HOME/Pictures/Screenshots"
+dir="$HOME/Imagens/Screenshots"
 prompt='Captura de Tela'
 
 list_col='3'
