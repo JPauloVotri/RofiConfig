@@ -1,9 +1,6 @@
 /*****----- Global Properties -----*****/
 @import                          "../../colors.rasi"
-
-* {
-    font: "Ubuntu Nerd Font Med 14";
-}
+@import                          "../../config.rasi"
 
 /*****----- Main Window -----*****/
 window {
